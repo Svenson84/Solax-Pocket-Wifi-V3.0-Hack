@@ -1,0 +1,245 @@
+ESP-ROM:esp32s2-rc4-20191025
+Build:Oct 25 2019
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3ffe6100,len:0x8
+load:0x3ffe6108,len:0x183c
+load:0x4004c000,len:0x1458
+load:0x40050000,len:0x1d50
+entry 0x4004c2c8
+[0;32mI (46) boot: ESP-IDF v4.3-dev-908-gf718ae459-dirty 2nd stage bootloader[0m
+[0;32mI (46) boot: compile time 13:29:37[0m
+[0;32mI (46) boot: chip revision: 0[0m
+[0;32mI (50) boot.esp32s2: SPI Speed      : 80MHz[0m
+[0;32mI (54) boot.esp32s2: SPI Mode       : DIO[0m
+[0;32mI (59) boot.esp32s2: SPI Flash Size : 4MB[0m
+[0;32mI (64) boot: Enabling RNG early entropy source...[0m
+[0;32mI (69) boot: Partition Table:[0m
+[0;32mI (73) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (80) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (88) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (95) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (102) boot:  3 ota_0            OTA app          00 10 00010000 00100000[0m
+[0;32mI (110) boot:  4 ota_1            OTA app          00 11 00110000 00100000[0m
+[0;32mI (118) boot:  5 cfg_data         unknown          40 00 00210000 00010000[0m
+[0;32mI (125) boot:  6 offline_data     unknown          41 00 00220000 001e0000[0m
+[0;32mI (133) boot: End of partition table[0m
+[0;32mI (137) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f000020 size=0x26140 (155968) map[0m
+[0;32mI (178) esp_image: segment 1: paddr=0x00036168 vaddr=0x3ffc5a80 size=0x04278 ( 17016) load[0m
+[0;32mI (183) esp_image: segment 2: paddr=0x0003a3e8 vaddr=0x40022000 size=0x00404 (  1028) load[0m
+[0;32mI (185) esp_image: segment 3: paddr=0x0003a7f4 vaddr=0x40022404 size=0x05824 ( 22564) load[0m
+[0;32mI (200) esp_image: segment 4: paddr=0x00040020 vaddr=0x40080020 size=0x93414 (603156) map[0m
+[0;32mI (329) esp_image: segment 5: paddr=0x000d343c vaddr=0x40027c28 size=0x0de4c ( 56908) load[0m
+[0;32mI (355) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (355) boot: Disabling RNG early entropy source...[0m
+[0;32mI (367) cache: Instruction cache : size 8KB, 4Ways, cache line size 32Byte[0m
+[0;32mI (367) cpu_start: cpu freq: 160[0m
+[0;32mI (369) cpu_start: Pro cpu up.[0m
+[0;32mI (426) cpu_start: Pro cpu start user code[0m
+[0;32mI (426) cpu_start: Application information:[0m
+[0;32mI (426) cpu_start: Project name:     wifi_station[0m
+[0;32mI (430) cpu_start: App version:      v4.3-dev-908-gf718ae459-dirty[0m
+[0;32mI (437) cpu_start: Compile time:     Nov 30 2021 13:27:21[0m
+[0;32mI (443) cpu_start: ELF file SHA256:  7431e44f098f8180...[0m
+[0;32mI (449) cpu_start: ESP-IDF:          v4.3-dev-908-gf718ae459-dirty[0m
+[0;32mI (456) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (463) heap_init: At 3FFD5A70 len 00026590 (153 KiB): DRAM[0m
+[0;32mI (469) heap_init: At 3FFFC000 len 00003A10 (14 KiB): DRAM[0m
+[0;32mI (476) spi_flash: detected chip: generic[0m
+[0;32mI (480) spi_flash: flash io: dio[0m
+[0;32mI (488) cpu_start: Starting scheduler on PRO CPU.[0m
+[0;32mI (497) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (497) wifi module: sn:***REMOVED***, ssid:***REMOVED***, pw:***REMOVED***, mqtt url:mqtts://mqtt001.solaxcloud.com, mqtt port:8883, local pw:***REMOVED***[0m
+I (527) wifi:wifi driver task: 3ffdfea8, prio:23, stack:6656, core=0
+[0;32mI (527) system_api: Base MAC address is not set[0m
+[0;32mI (527) system_api: read default base MAC address from EFUSE[0m
+I (537) wifi:wifi firmware version: 8d94a49
+I (537) wifi:wifi certification version: v7.0
+I (537) wifi:config NVS flash: enabled
+I (547) wifi:config nano formating: disabled
+I (547) wifi:Init data frame dynamic rx buffer num: 32
+I (557) wifi:Init management frame dynamic rx buffer num: 32
+I (557) wifi:Init management short buffer num: 32
+I (567) wifi:Init dynamic tx buffer num: 32
+I (567) wifi:Init static rx buffer size: 1600
+I (567) wifi:Init static rx buffer num: 10
+I (577) wifi:Init dynamic rx buffer num: 32
+[0;32mI (577) wifi_init: rx ba win: 6[0m
+[0;32mI (587) wifi_init: tcpip mbox: 32[0m
+[0;32mI (587) wifi_init: udp mbox: 6[0m
+[0;32mI (587) wifi_init: tcp mbox: 6[0m
+[0;32mI (597) wifi_init: tcp tx win: 5744[0m
+[0;32mI (597) wifi_init: tcp rx win: 5744[0m
+[0;32mI (607) wifi_init: tcp mss: 1440[0m
+[0;32mI (607) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (607) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (617) wifi module: ssid:***REMOVED***, pw:***REMOVED***[0m
+[0;32mI (737) phy: phy_version: 603, 72dfd77, Jul  7 2020, 19:57:05, 0, 2[0m
+I (747) wifi:enable tsf
+I (747) wifi:mode : sta (68:67:25:2c:44:fe) + softAP (68:67:25:2c:44:ff)
+I (747) wifi:Total power save buffer number: 16
+I (747) wifi:Init max length of beacon: 752/752
+I (757) wifi:Init max length of beacon: 752/752
+[0;32mI (757) wifi module: start connect to ap[0m
+[0;32mI (767) wifi module: wifi_init_sta finished.[0m
+[0;32mI (767) wifi module: addr:mqtts://mqtt001.solaxcloud.com, port:8883, sn:***REMOVED***, pwd:***REMOVED***[0m
+[0;32mI (777) wifi module: mqtt client register[0m
+[0;32mI (787) wifi module: Other event id:7[0m
+[0;31mE (787) esp-tls: couldn't get hostname for :mqtt001.solaxcloud.com:[0m
+[0;31mE (797) esp-tls: Failed to open new connection[0m
+[0;31mE (797) TRANS_SSL: Failed to open a new connection[0m
+[0;31mE (807) MQTT_CLIENT: Error transport connect[0m
+[0;32mI (807) wifi module: MQTT_EVENT_ERROR[0m
+[0;32mI (817) wifi module: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (817) wifi module: auth:***REMOVED***, auth_def:***REMOVED***[0m
+[0;32mI (827) wifi module: Starting server on port: '80'[0m
+[0;32mI (837) httpd_uri: request uri:/*[0m
+[0;32mI (837) httpd_uri: request uri:/DHCP.htm[0m
+[0;32mI (837) httpd_uri: request uri:/DHCP.htm[0m
+[0;32mI (847) httpd_uri: req method:3[0m
+[0;32mI (847) httpd_uri: request uri:/update.htm[0m
+[0;32mI (857) httpd_uri: request uri:/update.htm[0m
+[0;32mI (857) httpd_uri: req method:3[0m
+[0;32mI (867) httpd_uri: request uri:/update.htm[0m
+[0;32mI (867) httpd_uri: request uri:/staticip.htm[0m
+[0;32mI (877) httpd_uri: request uri:/staticip.htm[0m
+[0;32mI (877) httpd_uri: req method:3[0m
+[0;32mI (877) httpd_uri: request uri:/staticip.htm[0m
+I (887) wifi:new:<1,1>, old:<1,1>, ap:<1,1>, sta:<1,0>, prof:1
+I (887) wifi:state: init -> auth (b0)
+[0;32mI (897) httpd_uri: request uri:/staticip.htm[0m
+I (897) wifi:state: auth -> assoc (0)
+[0;32mI (907) httpd_uri: request uri:/newpassword.htm[0m
+I (907) wifi:state: assoc -> run (10)
+[0;32mI (917) httpd_uri: request uri:/newpassword.htm[0m
+[0;32mI (917) httpd_uri: req method:3[0m
+[0;32mI (917) httpd_uri: request uri:/newpassword.htm[0m
+[0;32mI (927) httpd_uri: request uri:/newpassword.htm[0m
+[0;32mI (927) httpd_uri: request uri:/newpassword.htm[0m
+I (937) wifi:connected with ***REMOVED***, aid = 3, channel 1, BW20, bssid = 2c:91:ab:63:b1:41
+I (947) wifi:security: WPA2-PSK, phy: bgn, rssi: -34
+I (947) wifi:pm start, type: 1
+
+[0;32mI (957) wifi module: mdns hostname set to: [SOLAXPOWER_POCKETWIFI_***REMOVED***][0m
+[0;32mI (957) wifi module: *********************************[0m
+[0;32mI (967) wifi module: version:3.003.02[0m
+[0;32mI (967) wifi module: Date:20211210[0m
+[0;32mI (977) wifi module: BootFrom:10000[0m
+[0;32mI (977) wifi module: *********************************[0m
+[0;32mI (987) wifi module: sta reconnct task.....:0[0m
+I (1027) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32mI (1517) esp_netif_handlers: sta ip: 10.0.1.148, mask: 255.255.255.0, gw: 10.0.1.1[0m
+[0;32mI (1517) wifi module: ip:10.0.1.148[0m
+[0;32mI (1587) modbus_tcp: modbus tcp socket1:51[0m
+[0;32mI (1587) modbus_tcp: modbus tcp server init complete[0m
+[0;32mI (1587) modbus_tcp: modbus tcp socket2:51[0m
+[0;32mI (4087) http_process: Total APs scanned = 13[0m
+[0;32mI (4087) http_process: ssid:***REMOVED***, rssi:100[0m
+[0;32mI (4087) http_process: ssid:***REMOVED***, rssi:94[0m
+[0;32mI (4087) http_process: ssid:unknown, rssi:54[0m
+[0;32mI (4087) http_process: ssid:WLAN-***REMOVED***, rssi:54[0m
+[0;32mI (4097) http_process: ssid:FRITZ!Box***REMOVED***, rssi:40[0m
+[0;32mI (4107) http_process: ssid:WLAN-***REMOVED***, rssi:36[0m
+[0;32mI (4107) http_process: ssid:FRITZ!Box***REMOVED***, rssi:34[0m
+[0;32mI (4117) http_process: ssid:***REMOVED***, rssi:32[0m
+[0;32mI (4117) http_process: ssid:WLAN-***REMOVED***, rssi:30[0m
+[0;32mI (4127) http_process: ssid:FRITZ!Box***REMOVED***, rssi:26[0m
+[0;32mI (6987) wifi module: x.get free heap size:40828[0m
+[0;32mI (12987) wifi module: x.get free heap size:41252[0m
+[0;32mI (15817) wifi module: Other event id:7[0m
+[0;32mI (17417) wifi module: MQTT_EVENT_CONNECTED[0m
+[0;32mI (17677) wifi module: MQTT_EVENT_SUBSCRIBED, msg_id=36967[0m
+[0;32mI (17677) wifi module: MQTT_EVENT_PUBLISHED, msg_id=2903[0m
+[0;32mI (17687) wifi module: MQTT_EVENT_SUBSCRIBED, msg_id=44981[0m
+[0;32mI (17687) wifi module: MQTT_EVENT_SUBSCRIBED, msg_id=27449[0m
+[0;32mI (17697) wifi module: MQTT_EVENT_SUBSCRIBED, msg_id=35064[0m
+[0;32mI (17697) wifi module: MQTT_EVENT_SUBSCRIBED, msg_id=31652[0m
+[0;32mI (17707) wifi module: MQTT_EVENT_DATA[0m
+[0;32mI (17707) mqtt_config: message len:123[0m
+[0;32mI (17717) wifi module: MQTT_EVENT_PUBLISHED, msg_id=3460[0m
+[0;32mI (20317) wifi module: x.get free heap size:35752[0m
+[0;32mI (23517) wifi module: x.get free heap size:35688[0m
+[0;32mI (26717) wifi module: x.get free heap size:35688[0m
+[0;32mI (29917) wifi module: x.get free heap size:35688[0m
+[0;32mI (33117) wifi module: x.get free heap size:35688[0m
+[0;32mI (33117) wifi module: uart baudrate set to 115200[0m
+[0;32mI (36317) wifi module: x.get free heap size:35688[0m
+[0;32mI (39517) wifi module: x.get free heap size:35688[0m
+[0;32mI (42717) wifi module: x.get free heap size:35688[0m
+[0;32mI (45917) wifi module: x.get free heap size:35688[0m
+[0;32mI (49117) wifi module: x.get free heap size:35688[0m
+[0;32mI (52317) wifi module: x.get free heap size:35688[0m
+[0;32mI (55517) wifi module: x.get free heap size:35756[0m
+[0;32mI (58717) wifi module: x.get free heap size:35656[0m
+[0;32mI (60987) wifi module: sta reconnct task.....:0[0m
+[0;32mI (61917) wifi module: x.get free heap size:35656[0m
+[0;32mI (65117) wifi module: x.get free heap size:35656[0m
+[0;32mI (65117) wifi module: uart baudrate set to 9600[0m
+[0;32mI (68317) wifi module: x.get free heap size:35656[0m
+[0;32mI (71517) wifi module: x.get free heap size:35656[0m
+[0;32mI (74717) wifi module: x.get free heap size:35656[0m
+[0;32mI (77917) wifi module: x.get free heap size:35656[0m
+[0;32mI (81117) wifi module: x.get free heap size:35656[0m
+[0;32mI (84317) wifi module: x.get free heap size:35656[0m
+[0;32mI (87517) wifi module: x.get free heap size:35656[0m
+[0;32mI (90717) wifi module: x.get free heap size:35724[0m
+[0;32mI (93917) wifi module: x.get free heap size:35656[0m
+[0;32mI (97117) wifi module: x.get free heap size:35656[0m
+[0;32mI (97117) wifi module: uart baudrate set to 115200[0m
+[0;32mI (100317) wifi module: x.get free heap size:35656[0m
+[0;32mI (103517) wifi module: x.get free heap size:35656[0m
+[0;32mI (106717) wifi module: x.get free heap size:35332[0m
+[0;32mI (109917) wifi module: x.get free heap size:35656[0m
+[0;32mI (113117) wifi module: x.get free heap size:35656[0m
+[0;32mI (116317) wifi module: x.get free heap size:35656[0m
+[0;32mI (119517) wifi module: x.get free heap size:35656[0m
+[0;32mI (120987) wifi module: sta reconnct task.....:0[0m
+[0;32mI (122717) wifi module: x.get free heap size:35656[0m
+[0;32mI (125917) wifi module: x.get free heap size:35724[0m
+[0;32mI (129117) wifi module: x.get free heap size:35656[0m
+[0;32mI (129117) wifi module: uart baudrate set to 9600[0m
+[0;32mI (132317) wifi module: x.get free heap size:35656[0m
+[0;32mI (135517) wifi module: x.get free heap size:35656[0m
+[0;32mI (138717) wifi module: x.get free heap size:35656[0m
+[0;32mI (141917) wifi module: x.get free heap size:35656[0m
+[0;32mI (145117) wifi module: x.get free heap size:35656[0m
+[0;32mI (148317) wifi module: x.get free heap size:35656[0m
+[0;32mI (151517) wifi module: x.get free heap size:35656[0m
+[0;32mI (154717) wifi module: x.get free heap size:35656[0m
+[0;32mI (157917) wifi module: x.get free heap size:35656[0m
+[0;32mI (161117) wifi module: x.get free heap size:35728[0m
+[0;32mI (161117) wifi module: uart baudrate set to 115200[0m
+[0;32mI (164317) wifi module: x.get free heap size:35656[0m
+[0;32mI (167517) wifi module: x.get free heap size:35656[0m
+[0;32mI (170717) wifi module: x.get free heap size:35656[0m
+[0;32mI (173917) wifi module: x.get free heap size:35656[0m
+[0;32mI (177117) wifi module: x.get free heap size:35656[0m
+[0;32mI (180317) wifi module: x.get free heap size:35656[0m
+[0;32mI (180987) wifi module: sta reconnct task.....:0[0m
+[0;32mI (183517) wifi module: x.get free heap size:35656[0m
+[0;32mI (186717) wifi module: x.get free heap size:35656[0m
+[0;32mI (189917) wifi module: x.get free heap size:35656[0m
+[0;32mI (193117) wifi module: x.get free heap size:35656[0m
+[0;32mI (193117) wifi module: uart baudrate set to 9600[0m
+[0;32mI (196317) wifi module: x.get free heap size:35728[0m
+[0;32mI (199517) wifi module: x.get free heap size:35656[0m
+[0;32mI (202717) wifi module: x.get free heap size:35656[0m
+[0;32mI (205917) wifi module: x.get free heap size:35656[0m
+[0;32mI (209117) wifi module: x.get free heap size:35656[0m
+[0;32mI (212317) wifi module: x.get free heap size:35656[0m
+[0;32mI (215517) wifi module: x.get free heap size:35656[0m
+[0;32mI (218717) wifi module: x.get free heap size:35656[0m
+[0;32mI (221917) wifi module: x.get free heap size:35656[0m
+[0;32mI (225117) wifi module: x.get free heap size:35656[0m
+[0;32mI (225117) wifi module: uart baudrate set to 115200[0m
+[0;32mI (228317) wifi module: x.get free heap size:35656[0m
+[0;32mI (231517) wifi module: x.get free heap size:35728[0m
+[0;32mI (234717) wifi module: x.get free heap size:35656[0m
+[0;32mI (237917) wifi module: x.get free heap size:35656[0m
+[0;32mI (240987) wifi module: sta reconnct task.....:0[0m
+[0;32mI (241117) wifi module: x.get free heap size:35656[0m
+[0;32mI (244317) wifi module: x.get free heap size:35656[0m
+[0;32mI (247517) wifi module: x.get free heap size:35656[0m
+[0;32mI (250717) wifi module: x.get free heap size:35656[0m
+

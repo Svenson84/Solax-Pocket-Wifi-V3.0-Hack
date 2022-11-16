@@ -1,0 +1,61 @@
+Programming Adapter:
+--------------------
+Using a USB to UART (3,3V TTL) Adapter, e.g. ESP Link with following connection:
+
+	ESP-Link		PocketWifiV3.0-PCB
+	-----------------------------------------
+	3V3			TP3 (3.3V) *see Flashing #3
+	TXD			TP5 (TX)
+	RXD			TP4 (RX)
+	GND			TP2 (GND)
+				and/or TP6 (GND) *optional
+				and TP7 (IO0) *mandatory
+	EN			not connected
+	RST			not connected
+	IO0			not connected
+	IO2			not connected
+
+
+Flashing:
+---------
+1) Install Arduino ESP32-S2 Board Support Package:
+	Detailed How-To: https://learn.adafruit.com/adafruit-metro-esp32-s2/arduino-ide-setup-2)
+	Short How-To:
+		a)	start Arduino IDE and open File -> Preferences
+		b)	add "https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_dev_index.json" in text box "Additional Boards Manager URLs"
+		c)	open Tools -> Board -> Board Manager, search "esp32" and install latest esp32 package from Espressif Systems for ESP32-S2 Dev Board.
+
+2) Connect HW and start into flash bootloader mode:
+	To enter the flash bootloader mode, pin TP7 (IO0) of the PocketWifiV3.0-PCB needs to be connected to GND before voltage is applied to the system.
+	Hint: You can short TP7 (IO0) and TP6 (GND) with a jumper and only connect TP2 (GND) to the ESP-Link.
+
+3) Apply supply voltage:
+	e.g. by plugging ESP-Link adapter into a USB port. Alternative apply +5V to PocketWifiV3.0-PCB via USB connector! In this case +3,3V of ESP-Link must not be connected! 
+	Attention: DO NOT plug the PocketWifiV3.0-PCB into a regular USB port of your computer!!! It does not support USB communication. It might damage the ESP on your PocketWifi-PCB.
+
+4) Read out OR flash firmare!
+	For read out, please see command line for esptool.py/esptool.exe below.
+	Remark: For windows the esptool can be found here: C:\Users\%USERNAME%\AppData\Local\Arduino15\packages\esp32\tools\esptool_py\
+	For flashing a firmware the esptool or the Arduino IDE can be used. 
+	For Arduino IDE select correct Board: "ESP32S2 Dev Module" and COM-Port of the ESP-Link. 
+	After flashing the new firmware also OTA-Flashing via IP can be used.
+
+5) Remove connection with ESP-Link and Plug PocketWifiV3.0 Dongle into the USB Port of the Solax Inverter.
+	Remark: You can keep GND, TXD and RXD connection with ESP-Link and use a Serial Monitor to monitor debug information for serial interface UART0.
+	For monitoring the debug interface UART0 while the Dongle is plugged in and powered by the Inverter, the 3V3 line must not be connected to ESP-Link!
+
+6) Done! The PocketWifiV3.0 dongle is ready to use now!
+
+
+Read out firmware:
+------------------
+esptool.py --port COM3 --baud 921600 read_flash 0 0x400000 solax.bin
+or
+esptool.exe --port COM3 --baud 921600 read_flash 0 0x400000 solax.bin
+
+
+Write/restore firmware:
+-----------------------
+esptool.py --port COM3 --baud 921600 write_flash --flash_mode dio --flash_freq 80m --flash_size detect 0x0 solax.bin
+or
+esptool.exe --port COM3 --baud 921600 write_flash --flash_mode dio --flash_freq 80m --flash_size detect 0x0 solax.bin
